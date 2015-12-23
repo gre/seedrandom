@@ -227,10 +227,6 @@ mixkey(math.random(), pool);
 //
 if ((typeof module) == 'object' && module.exports) {
   module.exports = seedrandom;
-  // When in node.js, try using crypto package for autoseeding.
-  try {
-    nodecrypto = require('crypto');
-  } catch (ex) {}
 } else if ((typeof define) == 'function' && define.amd) {
   define(function() { return seedrandom; });
 }
